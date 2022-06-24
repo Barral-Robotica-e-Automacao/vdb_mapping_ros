@@ -1,0 +1,7 @@
+<launch>
+  <arg name="config" default="$(find vdb_mapping_ros)/cfg/vdb_remote_params.yaml"/>
+
+  <node pkg="vdb_mapping_ros" type="vdb_mapping_ros_node" name="vdb_remote_mapping" output="screen">
+    <rosparam file="$(arg config)" command="load"/>
+  </node>
+</launch>
